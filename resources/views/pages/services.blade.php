@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
+{{-- @todo seo page --}}
 @section('title', '')
 
 @section('description', '')
 
+{{-- @todo update second description with chat gpt --}}
 @php
     $items = [
         [

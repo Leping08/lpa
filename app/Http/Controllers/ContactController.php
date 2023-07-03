@@ -65,7 +65,7 @@ class ContactController extends Controller
     /**
      * @param  array  $contact
      */
-    // @todo move this over to the Contact model
+    // @todo wire up emails to be sent out
     private function emailAdmins(array $validated)
     {
         foreach (config('mail.lead_dest_emails') as $email) {

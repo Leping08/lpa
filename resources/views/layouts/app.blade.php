@@ -9,23 +9,14 @@
     <meta name="description" content="@yield('description')">
     @vite('resources/css/app.css')
     <!-- Favorite Icons -->
+    {{-- @todo add favicons --}}
     {{-- <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('/site.webmanifest') }}"> --}}
 </head>
 
-<!-- Google tag (gtag.js) -->
-{{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8JTF9B99T"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-B8JTF9B99T');
-</script> --}}
+{{-- @todo add google analytics tag new version --}}
 
 <body>
 

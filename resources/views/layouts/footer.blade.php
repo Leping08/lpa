@@ -1,32 +1,7 @@
-@php
-    $links = [
-        [
-            'text' => 'Home',
-            'title' => '', // @todo SEO
-            'link' => route('home'),
-        ],
-        [
-            'text' => 'Services',
-            'title' => '', // @todo SEO
-            'link' => route('services'),
-        ],
-        [
-            'text' => 'About',
-            'title' => '', // @todo SEO
-            'link' => route('about'),
-        ],
-        [
-            'text' => 'Contact Us',
-            'title' => '', // @todo SEO
-            'link' => route('contact'),
-        ],
-    ];
-@endphp
-
 <footer class="bg-stone-100 dark:bg-stone-950">
     <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 lg:px-8">
         <nav class="flex justify-center space-x-12 pb-4 items-center" aria-label="Footer">
-            @foreach ($links as $item)
+            @foreach (\App\Library\Nav::items() as $item)
                 <div>
                     <a href="{{ $item['link'] }}" title="{{ $item['title'] }}"
                         class="text-sm leading-6 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100">{{ $item['text'] }}</a>

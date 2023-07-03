@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+{{-- @todo seo page --}}
 @section('title', '')
 
 @section('description', '')
