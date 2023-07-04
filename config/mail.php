@@ -102,6 +102,13 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    'to' => [
+        'admin' => [
+            'derek@deltavcreative.com',
+            'lpa.bobschmitt@gmail.com'
+        ]
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Markdown Mail Settings

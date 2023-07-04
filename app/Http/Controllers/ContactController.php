@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\Admin\ContactUs;
+use App\Mail\ContactUs;
 use App\Rules\Recaptcha;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -31,14 +31,12 @@ class ContactController extends Controller
 
         if (!$emptyHoneypot) {
             Log::info('Honeypot fields were not empty.');
-            session()->flash('warning', 'Are you a robot?');
             return back();
         }
 
         // Get the timestamp field and check if it is not within the last 3 seconds
         if ((int)$request->time > (Carbon::now()->timestamp - 3)) {
             Log::info('Timestamp was not within the last 3 seconds.');
-            session()->flash('warning', 'Are you a robot?');
             return back();
         }
 
@@ -65,13 +63,9 @@ class ContactController extends Controller
     /**
      * @param  array  $contact
      */
-    // @todo wire up emails to be sent out
     private function emailAdmins(array $validated)
     {
-        foreach (config('mail.lead_dest_emails') as $email) {
-            Log::info("Sending contact us email to: $email.");
-            Mail::to($email)->send(new ContactUs($contact, 'Contact Us'));
-            Log::info($contact->type->name." Email sent to: $email.");
-        }
+        Log::info("Sending contact us email.");
+        Mail::send(new ContactUs($validated));
     }
 }

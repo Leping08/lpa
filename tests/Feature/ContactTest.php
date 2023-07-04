@@ -2,8 +2,10 @@
 
 namespace Tests\Feature;
 
+use App\Mail\ContactUs;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 
 class ContactTest extends TestCase
@@ -13,6 +15,8 @@ class ContactTest extends TestCase
     /** @test */
     public function a_user_be_able_to_submit_a_contact_us()
     {
+        Mail::fake();
+
         $this->get(route('contact'))
             ->assertSee('Contact Us');
 
@@ -24,15 +28,19 @@ class ContactTest extends TestCase
             'g-recaptcha-response' => '1',
         ];
 
+        Mail::assertNothingSent();
+
         $this->post(route('contact.store'), $data)
             ->assertRedirect(route('contact'));
 
-        // @todo assert the email is sent out
+        Mail::assertSent(ContactUs::class);
     }
 
     /** @test */
     public function a_user_cannot_submit_a_contact_us_if_honeypot_fields_are_filled_out()
     {
+        Mail::fake();
+
         $this->get(route('contact'))
             ->assertSee('Contact Us');
 
@@ -55,12 +63,14 @@ class ContactTest extends TestCase
         $this->post(route('contact.store'), $data)
             ->assertRedirect(route('contact'));
 
-        // @todo assert the email is not sent out
+        Mail::assertNothingSent();
     }
 
     /** @test */
     public function a_user_cannot_submit_a_contact_us_where_just_one_honeypot_field_is_filled_out()
     {
+        Mail::fake();
+
         $this->get(route('contact'))
             ->assertSee('Contact Us');
 
@@ -77,12 +87,14 @@ class ContactTest extends TestCase
         $this->post(route('contact.store'), $data)
             ->assertRedirect(route('contact'));
 
-        // @todo assert the email is not sent out
+        Mail::assertNothingSent();
     }
 
     /** @test */
     public function a_user_cannot_submit_a_contact_us_if_timestamp_is_not_within_the_last_3_seconds()
     {
+        Mail::fake();
+
         $this->get(route('contact'))
             ->assertSee('Contact Us');
 
@@ -99,13 +111,15 @@ class ContactTest extends TestCase
         $this->post(route('contact.store'), $data)
             ->assertRedirect(route('contact'));
 
-        // @todo assert the email is not sent out
+        Mail::assertNothingSent();
     }
 
 
     /** @test */
     public function a_user_can_submit_a_contact_us_if_timestamp_is_within_the_last_3_seconds()
     {
+        Mail::fake();
+
         $this->get(route('contact'))
             ->assertSee('Contact Us');
 
@@ -122,6 +136,6 @@ class ContactTest extends TestCase
         $this->post(route('contact.store'), $data)
             ->assertRedirect(route('contact'));
 
-        // @todo assert the email is not sent out
+        Mail::assertSent(ContactUs::class);
     }
 }
