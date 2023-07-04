@@ -105,7 +105,7 @@ return [
     'to' => [
         'admin' => [
             'derek@deltavcreative.com',
-            'lpa.bobschmitt@gmail.com'
+            // 'lpa.bobschmitt@gmail.com'
         ]
     ],
 
