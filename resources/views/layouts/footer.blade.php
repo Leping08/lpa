@@ -4,7 +4,7 @@
             @foreach (\App\Library\Nav::items() as $item)
                 <div>
                     <a href="{{ $item['link'] }}" title="{{ $item['title'] }}"
-                        class="text-sm leading-6 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100">{{ $item['text'] }}</a>
+                        class="text-sm leading-6 text-stone-600 dark:text-stone-400 hover:text-yellow-700 dark:hover:text-yellow-500">{{ $item['text'] }}</a>
                 </div>
             @endforeach
         </nav>

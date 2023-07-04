@@ -9,7 +9,8 @@
 import { ref, watch, onMounted  } from 'vue'
 import { Switch } from '@headlessui/vue'
 
-const enabled = ref(null)
+// Enabled by default
+const enabled = ref(true)
 
 watch(enabled, async (newState) => {
     if (newState) {
