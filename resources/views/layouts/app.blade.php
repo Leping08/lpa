@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('favicons/site.webmanifest') }}">
+    {{-- @todo add site map and update the site map url in google search console --}}
 </head>
 
 @include('layouts.google-analytics')
