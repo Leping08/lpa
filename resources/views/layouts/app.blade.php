@@ -16,7 +16,7 @@
     <link rel="manifest" href="{{ asset('/site.webmanifest') }}"> --}}
 </head>
 
-{{-- @todo add google analytics tag new version --}}
+@include('layouts.google-analytics')
 
 <body>
 
