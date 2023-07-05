@@ -9,11 +9,10 @@
     <meta name="description" content="@yield('description')">
     @vite('resources/css/app.css')
     <!-- Favorite Icons -->
-    {{-- @todo add favicons --}}
-    {{-- <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('/site.webmanifest') }}"> --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('favicons/site.webmanifest') }}">
 </head>
 
 @include('layouts.google-analytics')
