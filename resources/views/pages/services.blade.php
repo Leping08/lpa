@@ -5,32 +5,31 @@
 
 @section('description', '')
 
-{{-- @todo update second description with chat gpt --}}
 @php
     $items = [
         [
             'title' => 'Site Development Plans',
             'image' => asset('/img/subdivision-plan.jpg'),
-            'description_1' => 'LPA will process and gain approval of development applications for conditional land uses, variance applications and other miscellaneous development approvals. Some services are provided to minimize the permit process that may have been described by a visit to Planning and Zoning offices.',
-            'description_2' => 'LPA will process and gain approval of development applications for conditional land uses, variance applications and other miscellaneous development approvals. Some services are provided to minimize the permit process that may have been described by a visit to Planning and Zoning offices.',
+            'paragraph_1' => 'LPA is committed to managing the processing and obtaining approvals for development applications. These applications can include those for conditional land uses, variance requests, and a range of other development-related permissions.',
+            'paragraph_2' => 'In addition, LPA provides specific services designed to streamline the permit process. The details of this process might have been discussed during an individual\'s visit to the Planning and Zoning offices. These services aim to simplify the often complex procedures associated with planning and development approvals.',
         ],
         [
             'title' => 'Public Hearing Services',
             'image' => asset('/img/public-hearing.jpg'),
-            'description_1' => 'LPA represents clients with expert testimony on public hearing matters relative to anything from rezones and site plan approvals to street vacations. As a 20 year AICP Planner, this expert testimony is often necessary for building the public record.',
-            'description_2' => 'LPA represents clients with expert testimony on public hearing matters relative to anything from rezones and site plan approvals to street vacations. As a 20 year AICP Planner, this expert testimony is often necessary for building the public record.',
+            'paragraph_1' => 'LPA offers representation for clients by providing expert testimony on public hearing issues. These issues can range from site plan approvals and rezoning applications to street vacations. As part of our service, we ensure that every case is handled with the utmost care and professionalism.',
+            'paragraph_2' => 'With 20 years of experience as an AICP Planner, the provision of expert testimony is often a crucial component in establishing the public record. We understand the importance of building a comprehensive public record and make it our mission to assist our clients in achieving their objectives.',
         ],
         [
             'title' => 'Consulting',
             'image' => asset('/img/consulting.jpg'),
-            'description_1' => 'LPA will consult with clients to determine the highest and best use of their land based upon zoning, future land use, utilities, environment, and transportation related matters. Due diligence reports and representation at formal and informal meetings with City/County staff members are provided on an as-needed basis.',
-            'description_2' => 'LPA will consult with clients to determine the highest and best use of their land based upon zoning, future land use, utilities, environment, and transportation related matters. Due diligence reports and representation at formal and informal meetings with City/County staff members are provided on an as-needed basis.',
+            'paragraph_1' => 'LPA works closely with clients, offering consultations to help identify the most optimal and effective use of their land. These consultations consider various factors such as zoning regulations, future land use, utilities, environmental considerations, and transportation-related issues. Our aim is to assist clients in making the most informed decisions regarding their land use.',
+            'paragraph_2' => 'Additionally, LPA provides due diligence reports and representation at both formal and informal meetings with City or County staff members. These services are offered based on the individual needs of our clients. Our team is dedicated to ensuring that our clients are well-prepared and properly represented in all meetings and negotiations.',
         ],
         [
             'title' => 'Application Processing',
             'image' => asset('/img/approved.jpg'),
-            'description_1' => 'LPA will process and gain approval of development applications for conditional land uses, variance applications and other miscellaneous development approvals. Some services are provided to minimize the permit process that may have been described by a visit to Planning and Zoning offices.',
-            'description_2' => 'LPA will process and gain approval of development applications for conditional land uses, variance applications and other miscellaneous development approvals. Some services are provided to minimize the permit process that may have been described by a visit to Planning and Zoning offices.',
+            'paragraph_1' => 'LPA is committed to overseeing the processing and obtaining approvals for various development applications. These include applications pertaining to conditional land uses, variances, and other types of development approvals. We dedicate our resources to navigate the complexities of these processes, ensuring all the necessary requirements are met for our clients.',
+            'paragraph_2' => 'Additionally, we offer certain services that aim to simplify the permit process. These services could be particularly beneficial for those who have visited the Planning and Zoning offices and found the procedures outlined to be intricate or cumbersome. Our goal is to streamline these procedures, making the permit acquisition process less taxing for our clients.',
         ],
     ];
 @endphp
@@ -53,8 +52,8 @@
                                 <div class="lg:max-w-lg">
                                     <h2 class="text-3xl font-semibold text-yellow-600 dark:text-yellow-600">
                                         {{ $item['title'] }}</h2>
-                                    <p class="mt-2 text-stone-900 dark:text-stone-200">{{ $item['description_1'] }}</p>
-                                    <p class="mt-2 text-stone-900 dark:text-stone-200">{{ $item['description_2'] }}</p>
+                                    <p class="mt-2 text-stone-900 dark:text-stone-200">{{ $item['paragraph_1'] }}</p>
+                                    <p class="mt-2 text-stone-900 dark:text-stone-200">{{ $item['paragraph_2'] }}</p>
                                 </div>
                             </div>
                         </div>
