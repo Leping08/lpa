@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +32,7 @@ Route::get('/contact-us', function () {
 })->name('contact');
 
 Route::post('/contact-us', [ContactController::class, 'store'])->name('contact.store');
+
+Route::get('/sitemap', function () {
+    return Redirect::to(asset('/sitemap.xml'));
+})->name('sitemap');
