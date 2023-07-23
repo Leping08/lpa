@@ -1,24 +1,29 @@
 @extends('layouts.app')
 
-{{-- @todo seo page --}}
-@section('title', '')
+@section('title', 'Land Planning and Permitting Manatee County | Zoning and Rezoning Bradenton')
 
-@section('description', '')
+@section('description', 'Land Planning Associates proudly assists Bradenton and Lakewood Ranch developers in obtaining approvals for land use permitting, site development, and zoning approvals in Manatee County.')
 
 @php
     $items = [
         [
             'title' => 'Public Hearing Services',
+            'image_alt' => 'Public Hearing Services',
+            'image_title' => 'Public Hearing Services Bradenton',
             'image' => asset('/img/public-hearing.jpg'),
             'description' => 'LPA represents clients with expert testimony on public hearing matters relative to anything from rezones and site plan approvals to street vacations. As a 20 year AICP Planner, this expert testimony is often necessary for building the public record.',
         ],
         [
             'title' => 'Consulting',
+            'image_alt' => 'Consulting Services',
+            'image_title' => 'Consulting Services Manatte County',
             'image' => asset('/img/consulting.jpg'),
             'description' => 'LPA will consult with clients to determine the highest and best use of their land based upon zoning, future land use, utilities, environment, and transportation related matters. Due diligence reports and representation at formal and informal meetings with City/County staff members are provided on an as-needed basis.',
         ],
         [
             'title' => 'Application Processing',
+            'image_alt' => 'Application Processing',
+            'image_title' => 'Development Applications Bradenton',
             'image' => asset('/img/approved.jpg'),
             'description' => 'LPA will process and gain approval of development applications for conditional land uses, variance applications and other miscellaneous development approvals. Some services are provided to minimize the permit process that may have been described by a visit to Planning and Zoning offices.',
         ],
@@ -36,7 +41,7 @@
                         <div
                             class="mx-auto items-center grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                             <div class="flex items-start justify-around">
-                                <img src="{{ $item['image'] }}" alt="The Legacy Trail" title="EBike Trail Sarasota"
+                                <img src="{{ $item['image'] }}" alt="{{ $item['image_alt'] }}" title="{{ $item['image_title'] }}"
                                     class="lg:w-3/4 w-full rounded-xl shadow-xl">
                             </div>
                             <div class="lg:ml-auto lg:pl-4 lg:pt-4 {{ $loop->even ? 'lg:order-first' : '' }}">

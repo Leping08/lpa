@@ -13,7 +13,7 @@ class Nav
         return [
             [
                 'text' => 'Home',
-                'title' => 'Land Planning Associates Home Page',
+                'title' => 'Land Planning Associates',
                 'link' => route('home'),
             ],
             [
@@ -23,12 +23,12 @@ class Nav
             ],
             [
                 'text' => 'About',
-                'title' => 'Land Planning Associates About Us',
+                'title' => 'About Land Planning Manatee County',
                 'link' => route('about'),
             ],
             [
                 'text' => 'Contact Us',
-                'title' => 'Land Planning Associates Contact Us',
+                'title' => 'Contact Land Planning Associates',
                 'link' => route('contact'),
             ],
         ];

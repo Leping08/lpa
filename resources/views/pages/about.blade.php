@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
-{{-- @todo seo page --}}
-@section('title', 'About Us')
+@section('title', 'About Land Planning in Bradenton | Zoning and Public Land Use Manatee County')
 
-@section('description', '')
+@section('description', 'Bob Schmitt of LPA represents small businesses unfamiliar with negotiating their way through a variety of permitting processes. Most work is related to rezones and other conditional land use approvals in Manatee County.')
 
 @section('content')
     <div class="bg-white dark:bg-stone-800">
@@ -41,7 +40,7 @@
                     <div class="mx-auto lg:mx-0">
                         <div class="items-center grid grid-cols-1 md:grid-cols-4">
                             <div class="mx-auto">
-                                <img class="w-full rounded-xl shadow-xl" src="{{ asset('img/robert.jpg') }}" alt="Robert Schmitt">
+                                <img class="w-full rounded-xl shadow-xl" src="{{ asset('img/robert.jpg') }}" title="Bradenton Land Planner" alt="Robert Schmitt">
                             </div>
                             <div class="col-span-3">
                                 <div>

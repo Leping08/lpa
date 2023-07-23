@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
-{{-- @todo seo page --}}
-@section('title', 'Contact Us')
+@section('title', 'Contact Land Planning Associates | Permitting and Zoning Services Manatee County')
 
-@section('description', '')
+@section('description', 'Contact Land Planning Associates for assistance in land use permitting, entitlement approvals, rezoning, conditional land use, public hearings and more in Manatee County surrounding areas.')
 
 @section('content')
     <div class="bg-white dark:bg-stone-800">

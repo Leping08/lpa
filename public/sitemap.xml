@@ -6,12 +6,12 @@
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>https://lpabob.com/services</loc>
+        <loc>https://lpabob.com/about-us</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>https://lpabob.com/about-us</loc>
+        <loc>https://lpabob.com/services</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
