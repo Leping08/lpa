@@ -6,13 +6,14 @@ use App\Mail\ContactUs;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Mail;
+use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 class ContactTest extends TestCase
 {
     use WithFaker;
 
-    /** @test */
+    #[Test]
     public function a_user_be_able_to_submit_a_contact_us()
     {
         Mail::fake();
@@ -36,7 +37,7 @@ class ContactTest extends TestCase
         Mail::assertSent(ContactUs::class);
     }
 
-    /** @test */
+    #[Test]
     public function a_user_cannot_submit_a_contact_us_if_honeypot_fields_are_filled_out()
     {
         Mail::fake();
@@ -66,7 +67,7 @@ class ContactTest extends TestCase
         Mail::assertNothingSent();
     }
 
-    /** @test */
+    #[Test]
     public function a_user_cannot_submit_a_contact_us_where_just_one_honeypot_field_is_filled_out()
     {
         Mail::fake();
@@ -90,7 +91,7 @@ class ContactTest extends TestCase
         Mail::assertNothingSent();
     }
 
-    /** @test */
+    #[Test]
     public function a_user_cannot_submit_a_contact_us_if_timestamp_is_not_within_the_last_3_seconds()
     {
         Mail::fake();
@@ -115,7 +116,7 @@ class ContactTest extends TestCase
     }
 
 
-    /** @test */
+    #[Test]
     public function a_user_can_submit_a_contact_us_if_timestamp_is_within_the_last_3_seconds()
     {
         Mail::fake();
