@@ -12,7 +12,6 @@ class SitemapTest extends TestCase
      * A basic test example.
      *
      * @return void
-     * @test
      */
     public function test_the_site_map_page_loads()
     {

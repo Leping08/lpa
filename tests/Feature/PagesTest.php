@@ -9,7 +9,6 @@ class PagesTest extends TestCase
 {
     /**
      * @return void
-     * @test
      */
     public function test_the_home_page_loads(): void
     {
@@ -20,7 +19,6 @@ class PagesTest extends TestCase
 
     /**
      * @return void
-     * @test
      */
     public function test_the_service_page_loads(): void
     {
@@ -31,7 +29,6 @@ class PagesTest extends TestCase
 
     /**
      * @return void
-     * @test
      */
     public function test_the_contact_page_loads(): void
     {
@@ -42,7 +39,6 @@ class PagesTest extends TestCase
 
     /**
      * @return void
-     * @test
      */
     public function test_the_about_page_loads(): void
     {
