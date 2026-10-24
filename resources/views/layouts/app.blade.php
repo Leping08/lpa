@@ -28,7 +28,7 @@
         @include('layouts.flash')
 
         <!-- Define the content section -->
-        <main class="flex-grow">
+        <main class="grow">
             @yield('content')
         </main>
 

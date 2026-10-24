@@ -53,7 +53,7 @@
                                 <div class="mt-4">
                                     <a
                                         href="{{ route('services') }}"
-                                        class=" text-yellow-600 rounded-md border border-yellow-600 px-3.5 py-2.5 text-sm font-semibold hover:text-white shadow-sm hover:bg-yellow-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600">Learn More</a>
+                                        class=" text-yellow-600 rounded-md border border-yellow-600 px-3.5 py-2.5 text-sm font-semibold hover:text-white shadow-xs hover:bg-yellow-600 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600">Learn More</a>
                                 </div>
                             </div>
                         </div>
