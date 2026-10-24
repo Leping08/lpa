@@ -21,7 +21,7 @@
                                 <label class="block text-yellow-600 dark:text-yellow-600 font-bold mb-2"
                                     for="name">Name</label>
                                 <input type="text" name="name" id="name"
-                                    class="dark:text-stone-300 dark:bg-stone-950 w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-stone @error('name') border-red-500 @enderror"
+                                    class="bg-white dark:text-stone-300 dark:bg-stone-950 w-full px-4 py-3 rounded-lg shadow-xs focus:outline-hidden focus:shadow-outline-stone @error('name') border-red-500 @enderror"
                                     placeholder="Enter your name" value="{{ old('name') }}">
                                 @error('name')
                                     <p class="text-red-500 mt-2 text-sm">{{ $message }}</p>
@@ -31,7 +31,7 @@
                                 <label class="block text-yellow-600 dark:text-yellow-600 font-bold mb-2"
                                     for="email">Email</label>
                                 <input type="email" name="email" id="email"
-                                    class="dark:text-stone-300 dark:bg-stone-950 w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-stone @error('email') border-red-500 @enderror"
+                                    class="bg-white dark:text-stone-300 dark:bg-stone-950 w-full px-4 py-3 rounded-lg shadow-xs focus:outline-hidden focus:shadow-outline-stone @error('email') border-red-500 @enderror"
                                     placeholder="Enter your email address" value="{{ old('email') }}">
                                 @error('email')
                                     <p class="text-red-500 mt-2 text-sm">{{ $message }}</p>
@@ -41,7 +41,7 @@
                                 <label class="block text-yellow-600 dark:text-yellow-600 font-bold mb-2"
                                     for="phone">Phone</label>
                                 <input type="tel" name="phone" id="phone"
-                                    class="dark:text-stone-300 dark:bg-stone-950 w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-stone @error('phone') border-red-500 @enderror"
+                                    class="bg-white dark:text-stone-300 dark:bg-stone-950 w-full px-4 py-3 rounded-lg shadow-xs focus:outline-hidden focus:shadow-outline-stone @error('phone') border-red-500 @enderror"
                                     placeholder="Enter your phone number" value="{{ old('phone') }}">
                                 @error('phone')
                                     <p class="text-red-500 mt-2 text-sm">{{ $message }}</p>
@@ -51,7 +51,7 @@
                                 <label class="block text-yellow-600 dark:text-yellow-600 font-bold mb-2"
                                     for="message">Message</label>
                                 <textarea name="message" id="message" rows="5"
-                                    class="dark:text-stone-300 dark:bg-stone-950 w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-stone @error('message') border-red-500 @enderror"
+                                    class="bg-white dark:text-stone-300 dark:bg-stone-950 w-full px-4 py-3 rounded-lg shadow-xs focus:outline-hidden focus:shadow-outline-stone @error('message') border-red-500 @enderror"
                                     placeholder="Enter your message">{{ old('message') }}</textarea>
                                 @error('message')
                                     <p class="text-red-500 mt-2 text-sm">{{ $message }}</p>
@@ -71,7 +71,7 @@
                             <div class="mb-6">
                                 <button
                                     type="submit"
-                                    class="g-recaptcha w-full bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:bg-yellow-500"
+                                    class="g-recaptcha w-full bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg px-4 py-3 focus:outline-hidden focus:bg-yellow-500"
                                     data-sitekey="{{ config('google.recaptcha.site') }}"
                                     data-callback='onSubmit'
                                     data-action='submit'>Send Message</button>
