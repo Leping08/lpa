@@ -10,7 +10,7 @@ on:
 jobs:
   ci_tests:
     name: Run tests
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
 
     services:
       mysql:
@@ -94,7 +94,7 @@ jobs:
   vapor:
     needs: [ci_tests]
     name: Deploy to production
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
