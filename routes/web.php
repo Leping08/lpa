@@ -36,3 +36,19 @@ Route::post('/contact-us', [ContactController::class, 'store'])->name('contact.s
 Route::get('/sitemap', function () {
     return Redirect::to(asset('/sitemap.xml'));
 })->name('sitemap');
+
+// Served by the app because Vapor keeps web manifests off the asset CDN
+// and browsers require them to be same-origin.
+Route::get('/site.webmanifest', function () {
+    return response()->json([
+        'name' => 'Land Planning Associates Inc.',
+        'short_name' => 'LPA',
+        'icons' => [
+            ['src' => asset('favicons/android-chrome-192x192.png'), 'sizes' => '192x192', 'type' => 'image/png'],
+            ['src' => asset('favicons/android-chrome-512x512.png'), 'sizes' => '512x512', 'type' => 'image/png'],
+        ],
+        'theme_color' => '#ffffff',
+        'background_color' => '#ffffff',
+        'display' => 'standalone',
+    ], 200, ['Content-Type' => 'application/manifest+json'], JSON_UNESCAPED_SLASHES);
+})->name('manifest');
